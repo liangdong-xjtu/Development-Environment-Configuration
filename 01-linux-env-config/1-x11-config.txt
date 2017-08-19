@@ -1,0 +1,59 @@
+Config X11 with Xming + Putty
+
+1) Export DISPLAY
+In remote server or VM:
+export
+declare -x DISPLAY="localhost:10.0"
+
+2) Config Xming
+Install xming and run Xlaunch and config localhost10.0
+
+3) Config ssh
+install openssh-server
+vi /etc/ssh/sshd_conf
+X11Forwarding yes
+service ssh restart
+
+4) Config putty X11
+enable X11 forwarding localhost:10.0
+
+
+5) setenv可以修改 DISPLAY，或者在~/.bashrc 中修改 
+export DISPLAY="localhost:0.0"
+但是这样做没有效果，会造成打不开设备
+xterm: Xt error: Can't open display: localhost:0.0
+为了检查失败原因，可以从libXt入手
+
+Related ubuntu lib: libxt6
+
+apt-get source libxt6
+https://packages.debian.org/wheezy/libxt6
+https://cgit.freedesktop.org/xorg/lib/libXt/
+git://anongit.freedesktop.org/git/xorg/lib/libXt
+
+Compile libXt:
+sudo apt-get install xorg
+apt-cache search xorg-macros
+xutils-dev - X Window System utility programs for development
+sudo apt-get install xutils-dev
+
+Ref:
+http://www.cnblogs.com/xuanxufeng/p/6243244.html
+http://blog.chinaunix.net/uid-23072872-id-3388906.html
+http://www.blogjava.net/bacoo/archive/2012/11/26/392041.html
+http://www.cnblogs.com/kevin-boy/p/3223404.html
+
+export DISPLAY=:0.0的解释
+http://blog.csdn.net/rivarola/article/details/41041931
+DISPLAY 环境变量格式如下host:NumA.NumB,host指Xserver所在的主机主机名或者ip地址, 
+图形将显示在这一机器上, 可以是启动了图形界面的linux/Unix机器, 
+也可以是安装了Exceed, X-Deep/32等Windows平台运行的Xserver的Windows机器. 
+如果Host为空, 则表示Xserver运行于本机, 并且图形程序(Xclient)
+使用unix socket方式连接到Xserver,而不是TCP方式. 
+使用TCP方式连接时, NumA为连接的端口减去6000的值, 
+如果NumA为0, 则表示连接到6000端口; 
+使用unix socket方式连接时则表示连接的unix socket的路径, 
+如果为0, 则表示连接到/tmp/.X11-unix/X0 . NumB则几乎总是0.
+
+netstat -lnp
+在客户机上用netstat -lnp可以看到有程序监听了6010端口
