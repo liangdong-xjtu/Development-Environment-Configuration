@@ -1,0 +1,15 @@
+
+添加远程库
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000
+
+git remote add origin git@github.com:liangdong-xjtu/dong.git
+或者
+git remote add origin https://github.com/liangdong-xjtu/dong.git
+
+git remote set-url origin https://github.com/liangdong-xjtu/dong.git
+git branch --set-upstream-to=origin/master
+git pull
+git push -u origin master
+
+
+
