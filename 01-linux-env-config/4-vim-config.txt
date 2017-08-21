@@ -1,0 +1,7 @@
+
+Error:
+E353: Nothing in register "
+Fix:
+~/.viminfo file is empty since no right permission is configured.
+
+

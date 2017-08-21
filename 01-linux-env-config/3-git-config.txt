@@ -11,5 +11,7 @@ git branch --set-upstream-to=origin/master
 git pull
 git push -u origin master
 
-
+About SSH configuration for Github
+https://help.github.com/articles/connecting-to-github-with-ssh/
+http://www.cnblogs.com/tinyphp/p/5025311.html
 
