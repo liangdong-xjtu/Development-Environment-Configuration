@@ -1,0 +1,23 @@
+
+linux下格式化U盘方法
+http://blog.csdn.net/jk198310/article/details/45972623
+
+Linux检测硬盘坏道与修复
+http://blog.csdn.net/bamboolsu/article/details/43063015
+
+解决：Disk /dev/sdb doesn't contain a valid partition table 
+http://blog.csdn.net/wang1144/article/details/7997736
+
+如何在 Linux 系统下检测硬盘上的坏道和坏块 
+http://blog.csdn.net/u014743697/article/details/53316126
+
+巧用CHKDSK命令修复U盘文件或目录损坏问题
+http://www.xitongzhijia.net/xtjc/20140625/23423.html
+
+USB/Guide
+https://wiki.gentoo.org/wiki/USB/Guide
+
+Linux USB 驱动开发（三）—— 编写USB 驱动程序
+http://blog.csdn.net/zqixiao_09/article/details/50986965
+
+
