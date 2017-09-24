@@ -15,3 +15,22 @@ About SSH configuration for Github
 https://help.github.com/articles/connecting-to-github-with-ssh/
 http://www.cnblogs.com/tinyphp/p/5025311.html
 
+========================================================
+Github User Guide:
+
+1) Make pull request:
+Checkout via command line
+
+If you cannot merge a pull request automatically here, you have the option of checking it out via command line to resolve conflicts and perform a manual merge.
+
+Step 1: From your project repository, check out a new branch and test the changes.
+
+git checkout -b dvhh-queueSize hijerusalem
+git pull https://github.com/dvhh/C-Thread-Pool.git queueSize
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout hijerusalem
+git merge --no-ff dvhh-queueSize
+git push origin hijerusalem
+========================================================
