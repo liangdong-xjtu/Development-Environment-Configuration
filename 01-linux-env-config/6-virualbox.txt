@@ -1,0 +1,9 @@
+
+VirtualBox虚拟机路径迁移方法：
+在VirtualBox安装目录，按住 shift 右键打开 cmd，执行：
+VBoxManage internalcommands sethduuid "G:\VirtualBox VMs\ubuntu-14045-desktop-G\ubuntu-14045-desktop-G.vdi"
+
+VirtualBox中的Ubuntu没有权限访问共享文件夹/media/sf_shared 的解决方法：
+sudo adduser dong vboxsf
+
+
